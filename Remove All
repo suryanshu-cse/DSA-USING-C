@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int num;
+    scanf("%d",&num);
+    int list[num];
+    for(int i=0;i<num;i++){
+        scanf("%d",&list[i]);
+    }
+    int value;
+    scanf("%d",&value);
+    for(int i=0;i<num;){
+        if(list[i]==value){
+            for(int j=i;j<num-1;j++){
+                list[j]=list[j+1];
+            }
+            num--;
+        }
+        else 
+            i++;
+    }
+    for(int i=0;i<num;i++){
+        printf("%d ",list[i]);
+    }
+    return 0;
+}
